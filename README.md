@@ -5,7 +5,7 @@ U-Net image segmentation project
 ## Goal
 
 The Goal of this project is to perform image segmentation on the OxfordIIITPets dataset using Pytorch using a machine learning model. 
-Our model's architecture is based off of the U-Net described in the paper: " U-Net: Convolutional Networks for Biomedical Image Segmentation"
+Our model's architecture is based off of the U-Net described in the paper: "U-Net: Convolutional Networks for Biomedical Image Segmentation"
 
 ### Architecture From the paper
 The overall architecture from the original paper is a fully convolutional neural network that is similar to an autoencoder. 
