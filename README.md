@@ -10,7 +10,7 @@ Our model's architecture is based off of the U-Net described in the paper: "U-Ne
 ### Architecture From the paper
 The overall architecture from the original paper is a fully convolutional neural network that is similar to an autoencoder. 
 The model can be viewed as 9 "blocks" of convolutional layers with different functions applied before or after each block. After each of the first four "blocks,"
-a copy of the output of the block is saved for later use and another copy is run through a max pooling layer with stride 2 and width 2, the output of which is the input to the next block.
+a copy of the output of the block is saved for later use and another copy is run through a max pooling layer with stride 2 and width 2, the output of which is the input to the next block. The transpose convolution undoes the shrinking of the image from the pooling layers making the output image have the same width and height as the input.
 
 The fifth block is just a normal set of convolutional layers; no output is saved.
 
