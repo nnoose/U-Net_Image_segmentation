@@ -14,13 +14,13 @@ a copy of the output of the block is saved for later use and another copy is run
 
 The fifth block is just a normal set of convolutional layers; no output is saved.
 
-Before each of the last 4 blocks is applied, an "up-convolution" is applied to the output of the previous block to increase the size, this "up-convolution" is a convolution transpose operation with kernel size = 2 and stride = 2. The output of each "up-convolution" is concatenated with each of the stored outputs from the first 4 blocks in reverse order (i.e. block 3's output is concatenated to the output of "up-convolution 0," block 2's output is concatenated to the output of "up-convolution 1" and so on). these concatenated ouputs are the inputs to the last 4 layers.
+Before each of the last 4 blocks is applied, an "up-convolution" is applied to the output of the previous block to increase the size, this "up-convolution" is a convolution transpose operation with kernel size = 2 and stride = 2. The output of each "up-convolution" is concatenated with each of the stored outputs from the first 4 blocks in reverse order (i.e. block 3's output is concatenated to the output of "up-convolution 0," block 2's output is concatenated to the output of "up-convolution 1" and so on). these concatenated ouputs are the inputs to the last 4 blocks.
 
-
-TODO
+The last block outputs the final segmentation of the image.
 
 ### Our Architecture
-TODO
+
+We used a slightly modified version of the original U-net with Resnet blocks. We also made the last block output a 3 channel map that distinguishes between the edges, foreground, and background of each image. isntead of just foreground and background.
 
 ### Sources:
 - Ronneberger, O., Fischer, P., Brox, T. (2015). U-Net: Convolutional Networks for Biomedical Image Segmentation. In: Navab, N., 
